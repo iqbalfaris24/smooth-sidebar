@@ -1,0 +1,194 @@
+@media (max-width: 767.98px) {
+  .navbar .container {
+    max-width: 767px;
+  }
+}
+.navbar .container .pagestag h3,
+.navbar .container .pagestag .h3 {
+  margin: 0;
+}
+.navbar .container .pagestag h6,
+.navbar .container .pagestag .h6 {
+  margin: 0;
+  font-weight: 400;
+}
+.navbar .container .profile {
+  width: auto !important;
+}
+.navbar .container .profile ul {
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+}
+.navbar .container .profile ul li {
+  margin-right: 10px;
+}
+@media (max-width: 575.98px) {
+  .navbar .container .profile ul li {
+    display: none;
+  }
+}
+.sidebar {
+  position: fixed !important;
+  margin-left: -240px;
+  height: 100% !important;
+  transition: all 0.3s ease;
+  z-index: 99;
+  background: #fff;
+}
+.sidebar ul li {
+  margin: 34px 0;
+  position: relative !important;
+  height: 38px;
+  width: 100% !important;
+}
+.sidebar ul li a {
+  align-items: center;
+  height: 38px;
+  display: flex !important;
+}
+.sidebar ul li a:hover {
+  border-right: 5px solid #ff7158;
+  background: #fff;
+  background: linear-gradient(to right, #ffffff 0%, #ffffff 16%, rgba(255, 113, 88, 0.7333333333) 100%);
+}
+.sidebar ul li a:hover h6,
+.sidebar ul li a:hover .h6 {
+  color: #0c0d36;
+  font-weight: 500;
+}
+.content {
+  background-color: #e5e5e5;
+  transition: all 0.3s ease;
+}
+.sidebar.active {
+  width: 240px;
+  margin-left: -20px;
+}
+.sidebar.active ~ .content {
+  margin-left: 220px;
+}
+@media (max-width: 575.98px) {
+  .sidebar.active ~ .content {
+    margin-left: 0;
+  }
+}
+.btn {
+  width: 100%;
+}
+.btn-back {
+  background-color: #f3f3f3;
+  color: #bbb;
+  border: none;
+}
+.btn-back:hover {
+  background-color: #e9e6e6;
+  color: #bbb;
+  border: none;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  color: #0c0d36;
+}
+a,
+a:hover {
+  text-decoration: none;
+  color: #0c0d36;
+}
+ul {
+  list-style: none;
+}
+p {
+  color: #525252;
+}
+h5,
+.h5 {
+  margin: 20px 0px;
+  line-height: 30px;
+  font-weight: 500;
+}
+h6,
+.h6 {
+  margin: 15px 0px;
+  font-weight: 400;
+  line-height: 27px;
+}
+.pic-profile {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.harga {
+  color: #ff7158;
+}
+#Jumbotron,
+#SignUp,
+#SignIn {
+  margin-top: 100px;
+}
+.success {
+  margin-top: 60px;
+  margin-bottom: -30px;
+}
+.form-control,
+.form-select {
+  background-color: #f3f3f3;
+  border: none;
+}
+.navbar-toggler {
+  border: none;
+}
+.b-card {
+  border: none !important;
+}
+textarea:hover,
+input:hover,
+select:hover,
+textarea:active,
+input:active,
+select:active,
+textarea:focus,
+input:focus,
+select:focus,
+label:focus,
+.btn:active,
+.btn.active {
+  background-color: #f3f3f3 !important;
+  box-shadow: none !important;
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+button:hover,
+button:active,
+button:focus {
+  box-shadow: none !important;
+  outline: 0px !important;
+}
+footer {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-top: 1px solid #e4e4e4;
+}
+footer p {
+  margin: auto;
+}
+.content .MyProducts button {
+  max-width: 180px;
+  min-height: 45px;
+}
+.content .MyProducts .card-list .card {
+  margin-top: 20px;
+  background-color: #7fffd4;
+}
+.content .MyProducts .card-list .card img {
+  margin: 15px 15px 0 15px;
+  max-width: 274px;
+  max-height: 204px;
+  border-radius: 10px !important;
+}
+.content .MyProducts .card-list .card .card-body h5,
+.content .MyProducts .card-list .card .card-body .h5 {
+  margin: 0 !important;
+} /*# sourceMappingURL=admin.min.css.map */

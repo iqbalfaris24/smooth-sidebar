@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* Menampilkan scrollbar di dalam elemen dengan overflow */
+/* Merubah tampilan scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(242, 242, 242, 0.662745098);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url(../../../utilities/fonts/HelveticaNeue/helveticaneue.woff) format("woof");
+  src: url(../../../utilities/fonts/HelveticaNeue/helveticaneue.woff2) format("woof2");
+}
+body {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-txt);
+  font-family: Arial, sans-serif;
+}
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+  color: var(--color-headline);
+}
+body p {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+}
+body ul,
+body ol {
+  list-style: none;
+}
+body button {
+  border-radius: 5px;
+  min-width: 35px;
+  background-color: var(--color-btn);
+  transition: filter 0.2s ease-out;
+}
+body button:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+  /* ubah kecerahan elemen menjadi 80% saat di-hover */
+}
+
+nav {
+  background-color: var(--color-bg-side);
+  padding: 5px 20px;
+  top: 0;
+  position: sticky;
+}
+
+.sidebar {
+  display: flex;
+  min-height: 100vh;
+}
+.sidebar .sidebar__sidebar {
+  background-color: var(--color-bg-side);
+  position: fixed;
+  width: 220px;
+  height: 100vh;
+  transition: all 0.3s ease-out;
+  transform: translateX(-100%);
+}
+.sidebar .sidebar__sidebar:hover {
+  overflow-y: auto;
+}
+.sidebar .sidebar__sidebar .sidebar-content {
+  padding: 20px;
+}
+.sidebar .sidebar--show {
+  transform: translateX(0);
+}
+.sidebar .sidebar__main {
+  flex: 1;
+  margin-left: 220px;
+  padding: 25px;
+  overflow: auto;
+  transition: all 0.3s ease-out;
+}
+
+:root {
+  --color-bg: #232946;
+  --color-bg-side: #233246;
+  --color-btn: #eebbc3;
+  --color-btn-txt: #232946;
+  --color-txt: #b8c1ec;
+  --color-headline: #fffffe;
+  --color-border: #121629;
+}/*# sourceMappingURL=style.css.map */
