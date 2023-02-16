@@ -1,44 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/scss/style.css" />
-    <script src="utilities/Icons/feather.min.js"></script>
-    <title>Admin</title>
-  </head>
-  <body>
-    <nav>
-      <button class="btn-menu"><i data-feather="menu"></i></button>
-    </nav>
-    <div class="sidebar">
-      <!-- Sidebar -->
-      <aside class="sidebar__sidebar sidebar--show">
-        <div class="sidebar-content">
-          <h1>Hellow Sidebar</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptas itaque ducimus? Natus saepe eveniet alias provident? Voluptas distinctio modi delectus quisquam asperiores! Officiis non adipisci, soluta dolorum
-            minima qui.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cupiditate laborum doloribus officia dicta ab mollitia aliquam sint corporis accusantium, quod dolorem sequi! Exercitationem dolorum error deserunt
-          </p>
-        </div>
-      </aside>
 
-      <!-- Main -->
-      <main class="sidebar__main">
-        <h1>Hellow Mainbar</h1>
-      </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/scss/style.css" />
+  <link rel="stylesheet" href="utilities/Icons/fontawesome-free-6.3.0-web/css/all.css" />
+  <script src="utilities/Icons/feather.min.js"></script>
+  <title>Admin</title>
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <button class="btn-menu">
+        <i data-feather="menu"></i>
+      </button>
+      <h4>This Is Dashboard Sidebar</h4>
     </div>
-    <script>
-      feather.replace();
-      const btnMenu = document.querySelector(".btn-menu");
-      const sidebar = document.querySelector(".sidebar__sidebar");
-      const main = document.querySelector(".sidebar__main");
+    <a href="">
+      <div class="brand">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h1>SIDEBAR</h1>
+      </div>
+    </a>
+    <div class="dropdown">
+      <button class="user">
+        <img class="user__img" src="img/person.png" alt="" />
+        <span class="user__name">IQBAL FARIS AKBAR</span>
+        <i data-feather="chevron-down" class="chevron-up"></i>
+        <i data-feather="chevron-up" class="chevron-down d-none"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">
+          <i data-feather="settings"></i>
+          <span>Profile</span>
+        </a>
+        <a href="#">
+          <i data-feather="log-out"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class="sidebar sidebar--show">
+    <!-- Sidebar -->
+    <aside class="sidebar__sidebar">
+      <div class="sidebar-content">
+        <h1>Hellow Sidebar</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur voluptas itaque ducimus? Natus saepe
+          eveniet alias provident? Voluptas distinctio modi delectus quisquam asperiores! Officiis non adipisci, soluta
+          dolorum
+          minima qui.lorem Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cupiditate laborum doloribus
+          officia dicta ab mollitia aliquam sint corporis accusantium, quod dolorem sequi! Exercitationem dolorum error
+          deserunt
+        </p>
+      </div>
+    </aside>
 
-      btnMenu.addEventListener("click", function () {
-        sidebar.classList.toggle("sidebar--show");
-        main.style.marginLeft = sidebar.classList.contains("sidebar--show") ? "220px" : "0";
-      });
-    </script>
-  </body>
+    <!-- Main -->
+    <main class="sidebar__main">
+      <h1>Hellow Mainbar</h1>
+    </main>
+  </div>
+  <script>
+    feather.replace();
+    const btnMenu = document.querySelector(".btn-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    btnMenu.addEventListener("click", function () {
+      sidebar.classList.toggle("sidebar--show");
+    });
+  </script>
+  <script>
+    const button = document.querySelector(".user");
+    const chevronUp = document.querySelector(".chevron-up");
+    const chevronDown = document.querySelector(".chevron-down");
+
+    button.addEventListener("mouseenter", () => {
+      chevronUp.classList.add("d-none");
+      chevronDown.classList.remove("d-none");
+    });
+
+    button.addEventListener("mouseleave", () => {
+      chevronUp.classList.remove("d-none");
+      chevronDown.classList.add("d-none");
+    });
+  </script>
+</body>
+
 </html>
